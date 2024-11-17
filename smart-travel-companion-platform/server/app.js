@@ -23,10 +23,12 @@ mongoose
 // Routes
 const recommendationsRouter = require("./routes/recommendations");
 const bookingRouter = require("./routes/bookings");
+const authRoutes = require("./routes/authRoutes"); // Import authRoutes
 
 // Use routes for modularity
 app.use("/api/recommendations", recommendationsRouter);
 app.use("/api/bookings", bookingRouter);
+app.use("/api/auth", authRoutes); // Use authRoutes
 
 // Custom /search route for hotel search
 app.post("/api/search", (req, res) => {
